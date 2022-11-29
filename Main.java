@@ -6,7 +6,6 @@ public class Main {
 
         System.out.println("Hello World\n");
 
-        // Write some code here to print out the sum of 2 and 3 to the console.
         System.out.println("Sum of 2 + 3 is = " + (2 + 3) + "\n");
 
         Pyramid.Output();
@@ -19,8 +18,7 @@ public class Main {
         Adlibs a = new Adlibs("Harry", 18, "pink");
         System.out.println(a.story(a.name, a.age, a.favColor));
 
-        Replace character = new Replace("I can't wait till December break!", 10, "c , e");
-        System.out.println(character.charReplace());
+       
         // Finally look at File called Replace.java. This is a little more difficult.
         // Write some code here to call the charReplace method from the Replace class.
         // Note: Since charReplace is not a static method you will need to create an object of the Replace class
