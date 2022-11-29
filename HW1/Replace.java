@@ -16,19 +16,15 @@ package HW1;
 
 
 public class Replace {
-    public String str = "I don't understand this";
-    public int index = str.length();
-    public char c = str.charAt(1); 
-    public String substr1 = str.substring(0,c);
-    public String substr2 = str.substring(c,str.length());
+    public String str = "";
 
-    public Replace(String str, int index, char c) {
-        this.str = str;
-        this.index = index;
-        this.c = c;
-    }
-    public String charReplace(String str, char c) { { 
-        return substr1 + c + substr2 ;
+    public static String charReplace(String str, int index, char a) { {
+        int index = str.length();
+        int numnew;
+        char c = str.charAt(numnew); 
+        String substr1 = str.substring(0,numnew);
+        String substr2 = str.substring(numnew,str.length());
+        return substr1 + c + substr2;
     }
 }
 }
