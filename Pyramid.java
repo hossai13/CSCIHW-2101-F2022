@@ -31,6 +31,6 @@ public class Pyramid {
         System.out.println(p4);
         System.out.println(p3);
         System.err.println(p2);
-        System.out.println(p1 + "\n");
+        System.out.println(p1);
     }
 }

@@ -9,11 +9,7 @@ public class Main {
         System.out.println("Sum of 2 + 3 is = " + (2 + 3) + "\n");
 
         Pyramid.Output();
-        // You will see another file called Pyramid.java
-        // Write some code here to call the Output method from the Pyramid class.
-        // Note: Since Pyramid is a static method you will need to call it like this:
-        // Class.Method()
-        // Note2: Look at Pyramid.java for more information
+        System.err.println("\n");
 
         Adlibs a = new Adlibs("Harry", 18, "pink");
         System.out.println(a.story(a.name, a.age, a.favColor));
