@@ -16,13 +16,19 @@ package HW1;
 
 
 public class Replace {
-    String str = "I love cookies!";
-    int index = str.length();
-    char c = str.charAt(5); 
-    String substr1 = str.substring(0,5);
-    String substr2 = str.substring(5,14);
+    public String str = "I don't understand this";
+    public int index = str.length();
+    public char c = str.charAt(1); 
+    public String substr1 = str.substring(0,c);
+    public String substr2 = str.substring(c,str.length());
 
-    public String charReplace(String str, int index, char c) { 
-        return  substr1 + c + substr2 ; // replace null with your code
+    public Replace(String str, int index, char c) {
+        this.str = str;
+        this.index = index;
+        this.c = c;
     }
+    public String charReplace(String str, char c) { { 
+        return substr1 + c + substr2 ;
+    }
+}
 }
