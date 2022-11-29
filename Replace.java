@@ -16,7 +16,18 @@ package HW1;
 
 
 public class Replace {
-    public String charReplace(String str, int index, char c) {
-        return null; // replace null with your code
+    public String str = "I can't wait till the semester ends";
+    public int index = 0; 
+    public char c = "L";
+
+public Replace(String str, int index, char c) {
+        this.str = str;
+        this.index = index;
+        this.c = c; 
+    }
+
+public String charReplace(String str, int index, char c) {
+        int size = str.length();  
+        return ""; // replace null with your code
     }
 }
