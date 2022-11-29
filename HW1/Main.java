@@ -14,7 +14,8 @@ public class Main {
         Adlibs a = new Adlibs("Harry", 18, "pink");
         System.out.println(a.story(a.name, a.age, a.favColor));
 
-       
+        Replace r = new Replace();
+        System.out.println(r.charReplace("I love cookies", 5, c));
         // Finally look at File called Replace.java. This is a little more difficult.
         // Write some code here to call the charReplace method from the Replace class.
         // Note: Since charReplace is not a static method you will need to create an object of the Replace class
