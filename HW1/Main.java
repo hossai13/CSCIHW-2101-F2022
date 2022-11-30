@@ -9,14 +9,14 @@ public class Main {
         System.out.println("Sum of 2 + 3 is = " + (2 + 3) + "\n");
 
         Pyramid.Output();
-        System.err.println("\n");
+        System.out.println("\n");
 
         Adlibs a = new Adlibs("Tobi", 21, "blue");
         System.out.println(a.story(a.name, a.age, a.favColor));
 
         Replace r = new Replace("\nI need to get some sleep soon.");
-        System.err.print(r.str);
-        Replace.charReplace(r.str, 15, 'z');
+        System.out.print(r.str);
+        Replace.charReplace(r.str, 11, 'b');
     
         
 
