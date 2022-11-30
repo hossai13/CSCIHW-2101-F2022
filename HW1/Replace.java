@@ -17,14 +17,19 @@ package HW1;
 
 public class Replace {
     public String str = "";
-
-    public static String charReplace(String str, int index, char a) { {
+   
+    public Replace(String str) {
+        this.str = str;
+    }
+    
+    public static String charReplace(String str, int numnew, char b) { {
+        char c = str.charAt(numnew);
         int index = str.length();
-        int numnew;
-        char c = str.charAt(numnew); 
-        String substr1 = str.substring(0,numnew);
-        String substr2 = str.substring(numnew,str.length());
-        return substr1 + c + substr2;
+        String newChar = str.replaceFirst(String.valueOf(c), String.valueOf(b));
+        String substr1= str.substring(0, numnew);
+        String substr2 = str.substring(numnew+1, index);
+        System.err.println(str = substr1 + b + substr2);
+        return str; 
     }
 }
 }
