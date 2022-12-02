@@ -16,7 +16,7 @@ public class Main {
 
         Replace r = new Replace("\nI need to get some sleep soon.");
         System.out.print(r.str);
-        Replace.charReplace(r.str, 11, 'b');
+        Replace.charReplace(r.str, 9, 'L');
     
         
 

@@ -1,17 +1,16 @@
 package HW2;
+import java.util.Scanner;
 
 public class PythagoreanTheorem {
-    public double a = 0;
-    public double b = 0; 
-
-    public PythagoreanTheorem(double a, double b) {
-        this.a = a;
-        this.b = b;
-    }
+    Scanner keyboard = new Scanner(System.in); 
 
     public String getHypotenuse() {
-        String H = "Hypotenuse: ";
-        return H + Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+        System.out.print("Enter the length of the first side of the triangle: ");
+        double a = keyboard.nextInt();
+        System.out.print("Enter the length of the second side of the triangle: ");
+        double b = keyboard.nextInt();
+        double h = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+        return "The length of the hypotenuse is: " + h;
     }
 
 }

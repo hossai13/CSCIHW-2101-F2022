@@ -1,4 +1,3 @@
-
 package HW2;
 
 public class MathGames {
@@ -11,7 +10,6 @@ public class MathGames {
     // Bonus points: Try to make it accept any 2 sides and return the 3rd. So it can take in
     // Hypotenuse and Perpendicular and return the base.
 
-    
     // 2. Create a method that will calcuate my grade in the class. You can use the grade range as follows
         // A: 100 - 90
         // B:  89 - 80
@@ -24,10 +22,6 @@ public class MathGames {
         // Hint 2: You will probably need to cast the double to an int
         // Hint 3: You will probably need to use the Math.ceil() method 
 
-
-
-
-
     // 3. Create a method that will calculate the tip on a bill per person
     //      Method parameters: total bill, amount of people splitting the bill, percentage to tip.
     //      Note: I would like the total always rounded up to a whole number
@@ -36,17 +30,18 @@ public class MathGames {
     //      Hint 3: It is possible you might need to Cast a double to an int or vice versa
     //      Hint 4: You will probably need to use the Math.ceil() method 
 
-    
- 
-
-
     // you do not need this main if you want to make a tester class
      public static void main(String[] args){
+
         System.out.println("Hello World\n");
         
-        PythagoreanTheorem p = new PythagoreanTheorem(4, 2);
-        System.out.println("A = " + p.a + " B = " + p.b);
-        System.out.println(p.getHypotenuse());
+        PythagoreanTheorem p = new PythagoreanTheorem();
+        System.out.println(p.getHypotenuse() + "\n");
+
+        
+
+        BillCalc b = new BillCalc();
+        System.out.println(b.getBill() + "\n");
         
     }
 
