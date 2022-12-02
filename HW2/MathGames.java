@@ -10,8 +10,6 @@ public class MathGames {
     // Bonus points: Try to make it accept any 2 sides and return the 3rd. So it can take in
     // Hypotenuse and Perpendicular and return the base.
 
-
-
     
     // 2. Create a method that will calcuate my grade in the class. You can use the grade range as follows
         // A: 100 - 90
@@ -45,6 +43,8 @@ public class MathGames {
      public static void main(String[] args){
         System.out.println("Hello World");
         
+        PythagoreanTheorem a = new PythagoreanTheorem(3, 4);
+        System.out.println(a.getHypotenuse());
         
     }
 
