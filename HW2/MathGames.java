@@ -16,8 +16,4 @@ public class MathGames {
         System.out.println(b.getBill() + "\n");
         
     }
-
-
-
-
 }
