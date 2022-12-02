@@ -1,3 +1,4 @@
+
 package HW2;
 
 public class MathGames {
@@ -41,10 +42,11 @@ public class MathGames {
 
     // you do not need this main if you want to make a tester class
      public static void main(String[] args){
-        System.out.println("Hello World");
+        System.out.println("Hello World\n");
         
-        PythagoreanTheorem a = new PythagoreanTheorem(3, 4);
-        System.out.println(a.getHypotenuse());
+        PythagoreanTheorem p = new PythagoreanTheorem(4, 2);
+        System.out.println("A = " + p.a + " B = " + p.b);
+        System.out.println(p.getHypotenuse());
         
     }
 

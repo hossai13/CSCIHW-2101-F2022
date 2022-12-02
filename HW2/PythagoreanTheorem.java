@@ -9,7 +9,9 @@ public class PythagoreanTheorem {
         this.b = b;
     }
 
-    public double getHypotenuse() {
-        return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+    public String getHypotenuse() {
+        String H = "Hypotenuse: ";
+        return H + Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
     }
+
 }
