@@ -11,6 +11,7 @@ public class PythagoreanTheorem {
         double b = keyboard.nextInt();
         double h = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
         return "The length of the hypotenuse is: " + h;
+        
     }
-
+    
 }
