@@ -1,5 +1,4 @@
 package HW3;
-import java.util.Scanner;
 
 public class Loops {
 
@@ -70,7 +69,14 @@ public class Loops {
 
     public static void main(String[] args) {
         // Add code to help test your methods here
-        System.out.println("Start of Main");
+        System.out.println("Start of Main\n");
+
+
+        Sums s = new Sums();
+        System.out.println(s.loopE() + "\n");
+    
+
+
     }
     
 }
