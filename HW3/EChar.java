@@ -1,7 +1,7 @@
 package HW3;
 import java.util.Scanner;
 
-public class Sums {
+public class EChar {
     static Scanner keyboard = new Scanner(System.in); 
 
     public static boolean loopE(){
