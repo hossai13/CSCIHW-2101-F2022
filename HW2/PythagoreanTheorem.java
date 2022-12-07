@@ -13,5 +13,4 @@ public class PythagoreanTheorem {
         return "The length of the hypotenuse is: " + h;
         
     }
-    
 }

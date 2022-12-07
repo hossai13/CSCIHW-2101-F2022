@@ -71,11 +71,9 @@ public class Loops {
         // Add code to help test your methods here
         System.out.println("Start of Main\n");
 
-
-        Sums s = new Sums();
-        System.out.println(s.loopE() + "\n");
+        System.out.println(EChar.loopE() + "\n");
     
-
+        System.out.println(StringCopy.stringTimes() + "\n");
 
     }
     

@@ -19,5 +19,4 @@ public class BillCalc {
         double total = (bill * (tip / 100)) / people;
         return "$" + df.format(Math.ceil(total))  + " is the rough amount each person should pay.";
     }
-
 }
