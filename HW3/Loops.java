@@ -75,6 +75,10 @@ public class Loops {
     
         System.out.println(StringCopy.stringTimes() + "\n");
 
+        System.out.println(RemoveZ.stringZ() + "\n");
+
+        SumUp.sums();
     }
+
     
 }
