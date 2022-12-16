@@ -1,23 +1,27 @@
 package Project3;
+import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Ladder {
-    // Panels are the physical glass or tempered glass sheets
+    
     public int panels;
-    // ladder is the ladder structure (2d array)
+    
     public int[][] ladder;
-    // round counter
+    
     public int round = 1;
 
-    // make a ladder object with no parameter (default 5 panels)
+    public Ladder(){
+        this.panels = 5;
+    }
 
-    // make a ladder object with a panel parameter and assign the panels to that int
-
+    public Ladder(int panels){
+        this.panels = panels;
+    }
+    
     // create an array list called selections of integers for the selections the user will enter
-
     // ----make a int method to get the selection from the user called getSelection()---
-
-    // create a int variable for converetedSelection
-    // collect the selection ( use scanner here )
+       // create a int variable for converetedSelection
+     // collect the selection ( use scanner here )
         // if selection is L or l convert the selection to 0
         // Print the selection selected
         // return convertedSelection
@@ -26,6 +30,29 @@ public class Ladder {
         // Print the selection selected
         // return the converted selection
     // else print selection is invalid 
+
+   ArrayList <Integer> selections = new ArrayList<Integer>();
+   public int getSelection(){
+       int convertedSelection;
+       Scanner scan = new Scanner(System.in);
+       System.out.println("Enter L or R");
+       String selection = scan.nextLine();
+       if(selection.equals("L") || selection.equals("l")){
+           convertedSelection = 0;
+           System.out.println("You selected: " + selection);
+           return convertedSelection;
+       }
+       else if(selection.equals("R") || selection.equals("r")){
+           convertedSelection = 1;
+           System.out.println("You selected: " + selection);
+           return convertedSelection;
+       }
+       else{
+           System.out.println("Selection is invalid");
+           return 0;
+        }
+       }
+       
 
     // REMEMBER 2d array is [row][column]
     
@@ -56,11 +83,27 @@ public class Ladder {
     // else we want the value to be 0 so ladder[i][0]=0
     // after all is done return the ladder
 
+    public int [][] createLadder(){
+        int [][] ladder = new int [panels][2];
+        for(int i = 0; i < ladder.length; i++){
+            for(int j = 0; j < ladder[i].length; j++){
+                ladder[i][j] = (int)(2 * Math.random());
+            }
+            if(ladder[i][0] == ladder[i][1] && ladder[i][0] == 0){
+                ladder[i][0] = 1;
+            }
+            else if(ladder[i][0] == ladder[i][1] && ladder[i][0] == 1){
+                ladder[i][0] = 0;
+            }
+        }
+        return ladder;
+    }
+   
     // create a boolean method called calcPanel that takes in the following parameters:
     // 1. 2d int array ladder
     // 2. Integer ArrayList called selections
-    
-    // This method is pretty complex and will calculate the selections from the user in getSelection
+
+     // This method is pretty complex and will calculate the selections from the user in getSelection
     // and see if it matches up the 2d array from createLadder
     // First create an int size of the selections size 
     // then print the Round variable from above (thats why we made it global)
@@ -80,8 +123,31 @@ public class Ladder {
         // increment the round counter
         // print and say they lose 1 life 
         // return false 
+
+    public boolean calcPanel(int [][] ladder, ArrayList <Integer> selections){
+        int size = selections.size();
+        System.out.println("Round: " + round);
+        int [] temp = new int [2];
+        for(int i = 0; i < ladder[0].length; i++){
+            temp[i] = ladder[size][i];
+        }
+        int currentSelection = getSelection();
+        selections.add(currentSelection);
+        int choice = selections.get(size);
+        if(temp[choice] == 1){
+            System.out.println("Answer is correct");
+            round++;
+            return true;
+        }
+        else{
+            selections.remove(size);
+            round++;
+            System.out.println("You lose 1 life");
+            return false;
+        }
+    }
     
-    // EVERYTHING AFTER THIS POINT IS TO PRINT THE LADDER
+      // EVERYTHING AFTER THIS POINT IS TO PRINT THE LADDER
     // HERE IS HOW TO PRINT A BLANK LADDER
     public void printLadderBlank(){
         try {
@@ -106,9 +172,41 @@ public class Ladder {
     // "|"+ladder[i][j] + "|"
     // make a black printline
     // catch an Exception e like i have above in printLadder Blank 
-    
-    
+
+    public void printLadder(){
+        try{
+            System.out.println("|||||| ---- Start");
+            for(int i = 0; i < ladder.length; i++){
+                for(int j = 0; j < ladder[i].length; j++){
+                    System.out.print("|"+ladder[i][j] + "|");
+                }
+                System.out.println();
+            }
+            System.out.println("|||||| ---- Finish");
+        }
+        catch(Exception e){
+            System.out.println("ERROR LADDER IS NOT CREATED OR IS NULL...");
+        }
+    }
+
     // printCurrentLadder():
+    public void printCurrentLadder(){
+        try{
+            System.out.println("|||||| ---- Start");
+            for(int i = 0; i < selections.size(); i++){
+                for(int j = 0; j < ladder[i].length; j++){
+                    System.out.print("|"+ladder[i][j] + "|");
+                }
+                System.out.println();
+            }
+            System.out.println("|?||?|");
+            System.out.println("|||||| ---- Finish");
+        }
+        catch(Exception e){
+            System.out.println("ERROR LADDER IS NOT CREATED OR IS NULL...");
+    }
+
+
     // print System.out.println("|||||| ---- Start");
     // make a nested for loop like above except the i should be i < selections.size()
     // the j should be j< ladder[i].length
@@ -119,11 +217,5 @@ public class Ladder {
     // ouside both for loops print a ? ladder 
     // like this:
     // System.out.println("|?||?|");
-    
-    
-    
-    
-    
-    
-
+    }
 }
