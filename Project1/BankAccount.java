@@ -175,10 +175,9 @@ public class BankAccount {
             System.out.println("Thank you for using the Bank Account Menu");
         } else { 
             System.out.println("Invalid Choice");
-            
         }
-
     }
+    
     public static void savings(BankAccount account) {
         System.out.println("\nWould you like to create a savings account?");
         System.out.println("1. Yes");
