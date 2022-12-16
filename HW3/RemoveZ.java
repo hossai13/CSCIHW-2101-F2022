@@ -9,7 +9,7 @@ public class RemoveZ {
         String str = keyboard.nextLine();
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i)=='z'&& i!=0 && i!=str.length()-1)
-                str = str.substring(0,i) + str.substring(i+i);
+                str = str.substring(0,i) + str.substring(i+1);
         }
         return str;
     }
