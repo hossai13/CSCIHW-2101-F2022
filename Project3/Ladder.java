@@ -21,16 +21,16 @@ public class Ladder {
     ArrayList <Integer> selections = new ArrayList<Integer>();
     public int getSelection(){
         int convertedSelection;
-        while(true){
+        while (true){
             Scanner scan = new Scanner(System.in);
             System.out.print("Enter L or R: ");
             String selection = scan.nextLine();
-       if(selection.equals("L") || selection.equals("l")){
+       if (selection.equals("L") || selection.equals("l")){
            convertedSelection = 0;
            System.out.println("You selected: " + selection);
            return convertedSelection;
        }
-       else if(selection.equals("R") || selection.equals("r")){
+       else if (selection.equals("R") || selection.equals("r")){
            convertedSelection = 1;
            System.out.println("You selected: " + selection);
            return convertedSelection;
@@ -41,11 +41,11 @@ public class Ladder {
 
     public int [][] createLadder(){
         ladder = new int [panels][2];
-        for(int i = 0; i < ladder.length; i++){
-            for(int j = 0; j < ladder[i].length; j++){
+        for (int i = 0; i < ladder.length; i++){
+            for (int j = 0; j < ladder[i].length; j++){
                 ladder[i][j] = (int)(2 * Math.random());
             }
-            if(ladder[i][0] == ladder[i][1] && ladder[i][0] == 0){
+            if (ladder[i][0] == ladder[i][1] && ladder[i][0] == 0){
                 ladder[i][0] = 1;
             }
             else {
@@ -59,18 +59,18 @@ public class Ladder {
         int size = selections.size();
         System.out.println("Round: " + round);
         int [] temp = new int [2];
-        for(int i = 0; i < ladder[0].length; i++){
+        for (int i = 0; i < ladder[0].length; i++){
             temp[i] = ladder[size][i];
         }
         int currentSelection = getSelection();
         selections.add(currentSelection);
         int choice = selections.get(size);
-        if(temp[choice] == 1){
+        if (temp[choice] == 1){
             System.out.println("\nAnswer is correct!");
             round++;
             return true;
         }
-        else{
+        else {
             selections.remove(size);
             round++;
             System.err.println("\nAnswer is incorrect!");

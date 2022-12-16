@@ -7,17 +7,17 @@ public class Main {
         int[][] laddercreate = ladder.createLadder();
         ladder.printLadderBlank();
         System.out.println("Total Lives: "+play.getLives());
-        while(ladder.selections.size() < ladder.panels){
+        while (ladder.selections.size() < ladder.panels){
             System.out.println("---------LEGEND-----------"); 
             System.out.println("0: Glass ");
             System.out.println("1: Tempered Glass ");
             System.out.println("--------------------------"); 
-            if(play.getLives()==0){
+            if (play.getLives()==0){
                 System.out.println("YOU DIED");
                 System.exit(0);
             }
             System.out.println("Current Place in Ladder: " +ladder.selections.size());
-            if(ladder.calcPanel(laddercreate, ladder.selections) == false){
+            if (ladder.calcPanel(laddercreate, ladder.selections) == false){
                 play.death();
             }
             System.out.println("Total Lives: "+play.getLives());
