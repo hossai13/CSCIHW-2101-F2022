@@ -73,8 +73,7 @@ public class Arrays {
          
         return sortedArray;
     }
-
-
+    
     public static void main(String[] args) {
         // Tester main method for your methods
         System.out.println("Hello World!\n");
